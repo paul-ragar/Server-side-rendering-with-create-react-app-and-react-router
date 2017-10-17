@@ -15,10 +15,7 @@ const match = reactRouter.match
 const RouterContext = reactRouter.RouterContext
 
 const staticFiles = [
-  '/static/*',
-  '/logo.svg',
-  '/asset-manifest.json',
-  '/favicon.ico'
+  '/static/*'
 ]
 
 const routes = require('../src/routes').default()

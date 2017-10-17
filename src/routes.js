@@ -1,17 +1,14 @@
 import React from 'react'
-import { Router, Route, browserHistory, IndexRedirect, IndexRoute } from 'react-router'
+import { Router, Route, browserHistory, IndexRedirect } from 'react-router'
 
-import Container from './Container'
-import App from './App'
-import Custom from './Custom'
+import Home from './app/home/Home'
+import Settings from './app/settings/Settings'
 
-const Routes = props => {
+const Routes = () => {
   return (
     <Router history={browserHistory}>
-      <Route path="/" component={Container}>
-        <IndexRoute component={App} />
-        <Route path="/custom" component={Custom} />
-      </Route>
+      <Route path="/" component={Home}></Route>
+      <Route path="/settings" component={Settings} />      
       <Route path="*">
         <IndexRedirect to="/" />
       </Route>
